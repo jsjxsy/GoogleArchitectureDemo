@@ -4,7 +4,6 @@ apply plugin: 'maven'
 
 android {
     compileSdkVersion build_versions.target_sdk
-    buildToolsVersion build_versions.build_tools
 
     defaultConfig {
         minSdkVersion build_versions.min_sdk
@@ -66,8 +65,9 @@ dependencies {
     api deps.okhttp.okhttp3_logging_interceptor
 
     // RxJava
-//    implementation deps.rxjava2
+    implementation deps.rxjava2
     api deps.rx_android
+    api "org.reactivestreams:reactive-streams:1.0.2"
 
     //router
     api deps.arouter.runtime
